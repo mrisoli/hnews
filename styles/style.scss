@@ -1,0 +1,99 @@
+$header-color: #FF6600;
+$body-color: #F6F6EF;
+$story-color: #F6D4CC;
+$selected-story-color: #E88F0C;
+
+* {
+  font-family: Helvetica;
+}
+
+header {
+  background-color: $header-color;
+  padding: 0 2vw;
+
+  .logo-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  nav {
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  li a {
+    display: block;
+    text-align: center;
+    padding: 0.875em 1em;
+    text-decoration: none;
+  }
+}
+
+
+.logo {
+  height: 4em;
+}
+
+main {
+  background-color: $body-color;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+
+  .story {
+    height: 8em;
+    width: 18em;
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    padding: 1em;
+    background-color: $story-color;
+
+    .score-block {
+      display: flex;
+      flex-direction: column;
+      padding-right: 1em;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      .text-preview {
+        text-overflow: ellipsis;
+      }
+    }
+
+    &.active {
+      background-color: $selected-story-color;
+      height: 20em;
+      width: 40em;
+    }
+  }
+}
+
+footer {
+  background-color: $header-color;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .search-box {
+    margin: 1em;
+    label {
+      margin-right: 0.5em;
+    }
+  }
+}
